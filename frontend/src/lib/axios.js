@@ -5,5 +5,5 @@ export const axiosInstance = axios.create({
     import.meta.env.MODE === "development"
       ? "http://localhost:5001/api"
       : "https://chat-app-backend-ka8x.onrender.com/api",
-  withCredentials: true,
+  withCredentials: true, // This is correct!
 });
