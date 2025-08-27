@@ -39,7 +39,7 @@ export const useAuthStore = create((set, get) => ({
       toast.error(error.response.data.message);
     } finally {
       set({ isSigningUp: false });
-    }
+    } 
   },
 
   login: async (data) => {

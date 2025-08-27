@@ -24,9 +24,7 @@ app.use(cookieParser());
 const allowedOrigin =
   process.env.NODE_ENV === "development"
     ? "http://localhost:5173"
-    : process.env.VITE_BACKEND_URL
-    ? process.env.VITE_BACKEND_URL.replace("/api", "") // remove /api if present
-    : "*";
+    : process.env.FRONTEND_URL || "*";
 
 app.use(
   cors({
