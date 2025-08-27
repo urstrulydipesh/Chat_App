@@ -78,10 +78,7 @@ app.use(express.urlencoded({ limit: "10mb", extended: true }));
 app.use(cookieParser());
 
 // ✅ Dynamic CORS for dev & production
-const allowedOrigin =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:5173"
-    : process.env.FRONTEND_URL || "*";
+const allowedOrigin = process.env.FRONTEND_URL || "*";
 
 app.use(
   cors({
